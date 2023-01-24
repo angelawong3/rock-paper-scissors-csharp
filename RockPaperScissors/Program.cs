@@ -4,9 +4,37 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ROCKPAPERSCISSORS
+namespace RockPaperScissors
 {
     class Program
     {
+        static void Main(string[] args)
+        {
+            string inputPlayer, inputCPU;
+            int randomInt;
+
+            Console.Write("Choose between ROCK, PAPER and SCISSORS: ");
+            inputPlayer = Console.ReadLine();
+
+            Random round = new Random();
+
+            randomInt = round.Next(1, 4);
+
+            switch (randomInt)
+            {
+                case 1:
+                    inputCPU = "ROCK";
+                    break;
+                case 2:
+                    inputCPU = "PAPER";
+                    break;
+                case 3:
+                    inputCPU = "SCISSORS";
+                    break;
+                default:
+
+                    break;
+            }
+        }
     }
 }
